@@ -3,7 +3,7 @@ import "./App.scss";
 
 function setNewMode(active) {
   const body = document.documentElement.getElementsByTagName("body")[0];
-  if (active) {
+  if (!active) {
     body.style.setProperty("--Elements", "var(--DarkModeElements)");
     body.style.setProperty("--Background", "var(--DarkModeBackground)");
     body.style.setProperty("--Text", "var(--lightModeElementsAndDarkModeText)");
