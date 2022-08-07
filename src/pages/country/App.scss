@@ -1,0 +1,148 @@
+.CountryPage {
+  background-color: var(--Background);
+  min-height: 100vh;
+  .imgContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin-bottom: 2rem;
+    grid-area: flag;
+  }
+  .flag {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .BackButton {
+    grid-area: button;
+    margin-left: 3rem;
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+    width: fit-content;
+  }
+  .infoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    h1 {
+      font-size: 1.8rem;
+      font-weight: 800;
+      color: var(--Text);
+      padding-left: 2rem;
+      margin-bottom: 1rem;
+    }
+    div {
+      margin-left: 2rem;
+      display: flex;
+      align-items: center;
+      flex-direction: row;
+      margin-top: 1rem;
+      h5 {
+        font-size: 1.6rem;
+        color: var(--Text);
+        font-weight: 600;
+      }
+      p {
+        font-size: 1.4rem;
+        text-indent: 0.3rem;
+        color: var(--Text);
+        font-weight: 300;
+      }
+    }
+  }
+  .additionalInfo {
+    margin-top: 3.2rem;
+  }
+  footer {
+    margin-top: 3rem;
+    width: 100%;
+    h2 {
+      font-weight: 600;
+      font-size: 1.8rem;
+      margin-left: 1rem;
+      color: var(--Text);
+    }
+    nav {
+      margin-top: 1rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      width: 100%;
+      height: auto;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 1rem 0;
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .CountryPage {
+    display: grid;
+    grid-template-rows: 9vh 8rem;
+    grid-template-columns: 55% 45%;
+    grid-template-areas:
+      "header header"
+      "button button"
+      "flag content";
+    align-items: start;
+    justify-items: center;
+    row-gap: 3rem;
+    .rightsite {
+      grid-area: content;
+      justify-self: start;
+    }
+    .imgContainer {
+      width: 70%;
+      height: 65%;
+      overflow: hidden;
+      img {
+        width: 100%;
+        object-fit: fill;
+      }
+    }
+    .BackButton {
+      justify-self: start;
+      align-self: start;
+      position: relative;
+      left: 13rem;
+    }
+    .infoContainer {
+      display: grid;
+      grid-template-areas: "top top" "left right";
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 1fr;
+      align-items: start;
+      h5 {
+        font-size: 2rem !important;
+      }
+      p {
+        font-size: 1.9rem !important;
+      }
+      .additionalInfo {
+        grid-area: right;
+        align-self: end;
+        h5 {
+          font-size: 2rem;
+        }
+      }
+    }
+    .info {
+      grid-area: left;
+      h1 {
+        font-size: 3rem;
+        margin-bottom: 5rem;
+      }
+    }
+    footer {
+      max-width: 56rem;
+      margin-top: 12rem;
+      width: 90%;
+      h2 {
+        font-size: 2rem;
+      }
+    }
+  }
+}

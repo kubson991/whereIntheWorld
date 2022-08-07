@@ -1,0 +1,51 @@
+.Selector {
+  margin-left: 2rem;
+  margin-top: 2rem;
+  width: fit-content;
+  height: fit-content;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0.5rem;
+  box-shadow: 0px 0px 17px -10px #000000;
+  select {
+    option {
+      text-indent: 2rem;
+    }
+    background-color: var(--Elements);
+    text-indent: 2rem;
+    width: 20rem;
+    height: 4rem;
+    outline: none;
+    border: unset;
+    color: var(--Text);
+    /* for Firefox */
+    -moz-appearance: none;
+    /* for Chrome */
+    -webkit-appearance: none;
+  }
+
+  /* For IE10 */
+  select::-ms-expand {
+    display: none;
+  }
+  span {
+    height: 1em;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 1rem;
+    margin: auto;
+    font-size: 1.9rem;
+    pointer-events: none;
+    color: var(--lightModeInput);
+  }
+}
+@media (min-width: 1400px) {
+  .Selector {
+    margin-right: 3.5rem;
+    select {
+      font-size: 1.5rem;
+    }
+  }
+}

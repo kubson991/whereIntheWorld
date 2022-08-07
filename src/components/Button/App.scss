@@ -1,0 +1,31 @@
+.ButtonComponent {
+  min-width: 10rem;
+  min-height: 3.5rem;
+  display: flex;
+  align-items: center;
+  border-radius: 5%;
+  border: unset;
+  outline: none;
+  background-color: var(--Elements);
+  box-shadow: 0px 0px 10px -4px #000000c8;
+  color: var(--lightModeInput);
+  gap: 0.7rem;
+  span {
+    font-size: 2rem;
+    padding-left: 0.8rem;
+    color: var(--Text);
+  }
+}
+.ButtonComponent:hover {
+  color: var(--Text);
+}
+.WithoutIcon {
+  justify-content: center;
+}
+
+@media (min-width: 1440px) {
+  .ButtonComponent {
+    font-size: 1.8rem;
+    min-width: 13rem;
+  }
+}

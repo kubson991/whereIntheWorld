@@ -1,0 +1,40 @@
+.InputSearch {
+  display: flex;
+  align-items: center;
+  background-color: var(--Elements);
+  width: 90%;
+  max-width: 40rem;
+  margin: auto;
+  margin-top: 3rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+  box-shadow: 0px 0px 18px -10px #000000;
+  span {
+    font-size: 2rem;
+    color: var(--lightModeInput);
+  }
+  input {
+    width: 90%;
+    outline: none;
+    border: unset;
+    font-family: "Nunito Sans", sans-serif;
+    background-color: var(--Elements);
+    color: var(--Text);
+    &::placeholder {
+      color: var(--placeHolder);
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .InputSearch {
+    margin: 0;
+    margin-left: 3.5rem;
+    max-height: 4rem;
+    margin-top: 1rem;
+    input {
+      font-size: 1.6rem;
+    }
+  }
+}

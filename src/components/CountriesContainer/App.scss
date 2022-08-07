@@ -1,0 +1,21 @@
+.CountriesContainer {
+  width: 100%;
+  height: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+  justify-items: center;
+  & > img {
+    width: 100%;
+    margin-top: 8rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  .CountriesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+    .loadingScreen {
+      object-fit: contain;
+      height: 85rem;
+    }
+  }
+}
